@@ -1,3 +1,6 @@
+import string
+from random import choice
+
 class Credential:
     """
     Class that shall generate new instances of user credentials.
@@ -28,3 +31,30 @@ class Credential:
         """
 
         Credential.credential_details.append(self)
+
+    @classmethod
+    def display_new_credentials(cls, password):
+        """
+        This is a method that displays all the newly created credentials
+        """
+        #New credentials empty array
+        all_credential_details = []
+
+        for credential in cls.credential_details:
+            if credential.cred_password == password:
+                all_credential_details.append(credential)
+
+        return all_credential_details
+    
+    @classmethod
+    def generate_new_password(cls):
+        """
+        This method generates a random new mixed alphanumeric password
+        """
+        size = 10 #length of password
+
+        alphanum = string.ascii_uppercase + string.digits + string.ascii_lowercase
+
+        gen_password = ''.join( choice(alphanum) for num in range(size) )
+
+        return gen_password

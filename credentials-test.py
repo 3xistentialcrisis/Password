@@ -61,3 +61,5 @@ class TestCredential(unittest.TestCase):
         gen_password = self.new_cred.generate_new_password()
         self.assertEqual(len(gen_password),10)
 
+if __name__ == '__main__':
+    unittest.main()

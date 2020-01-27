@@ -76,9 +76,30 @@ def create_new_password(cred_username):
         cred_username: this is the username of the credential account
     """
 
-    gen_password = Credential.generate_password()
+    gen_password = Credential.generate_new_password()
 
     return gen_password
 
+#Log-in Feature
+def log_in(username,password):
+    """
+    This function enables users to login to their password locker account
 
+    Args:
+        username : This is the user's name on the password locker platform/account
+        password : This is the password locker password chosen by the user 
+    """
+    log_in = User.log_in(username, password)
+    if log_in != False:
+        return User.log_in(username, password)
 
+# ------------------------------------->
+def main():
+    """
+    This function runs the password locker application
+    """
+    
+    print("Welcome to the Password Locker Application!\n")
+
+if __name__ == '__main__':
+    main()

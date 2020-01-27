@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         """
 
         #User Object
-        self.new_user = User("mary","catwoman","cat","cat") 
+        self.new_user = User("mary","catwoman","cat") 
 
         #User Details Array
         User.user_details = []
@@ -35,7 +35,6 @@ class TestUser(unittest.TestCase):
         self.assertEqual( self.new_user.fname,"mary")
         self.assertEqual( self.new_user.username, "catwoman" )
         self.assertEqual( self.new_user.password, "cat" )
-        self.assertEqual( self.new_user.confirm_password, "cat" )
     
     def test_save_user(self):
         """
