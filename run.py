@@ -1,4 +1,5 @@
 from user import User
+from credentials import Credential
 
 
 #Create User A/C
@@ -34,3 +35,5 @@ def display_users():
     This function displays all the created user accounts
     """
     return User.display_users()
+
+
