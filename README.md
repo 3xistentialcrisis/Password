@@ -6,7 +6,8 @@ By: Wanjiku Karanja
 This is an application that enables its users to store and manage their existing passwords as well as generate new passwords for their various web accounts.
 
 This application runs on the terminal. The following short codes are used to access the applications functions:
- 
+ 1. ac - Create a New Password Locker Account
+ 2. 
 
 # Technologies Used
 This application was built through Python3.8 
@@ -44,6 +45,16 @@ This application enables its users to:
 1. To create an account by creating a username and password;
 2. Store their existing account login credentials;
 3. Generate a random alpahanumeric password for their new credentials;
+
+# Behavior-Driven Development (BDD)
+1. 
+
+# Test Driven Development (TDD)
+To test this application, run this commands in the terminal;
+
+$ python3.8 user-test.py
+
+$ python3.8 credentials-test.py
 
 # Known Bugs
 There are no known bugs at the time of its creation.

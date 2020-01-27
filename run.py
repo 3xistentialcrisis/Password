@@ -123,5 +123,18 @@ def main():
 
             print(save_users + "\n" + "congratulations! You have succesfully created your account")
 
+        #Display User Account
+        elif short_code == "du":
+            print("\n")
+            
+            display_users = User.display_users()
+            print(display_users)
+
+        else:
+            print("")
+            print("You have not yet created your user account")
+
+
+
 if __name__ == '__main__':
     main()
