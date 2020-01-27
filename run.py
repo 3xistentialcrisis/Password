@@ -1,5 +1,7 @@
 from user import User
 
+
+#Create User A/C
 def create_user_account(fname,username,password,confirm_password):
     """
     This function creates the user account
@@ -15,6 +17,7 @@ def create_user_account(fname,username,password,confirm_password):
 
     return new_user
 
+#Save User A/C
 def save_users(user):
     """
     This function saves the user account
@@ -24,3 +27,10 @@ def save_users(user):
     """
 
     user.save_user()
+
+#Display User A/Cs
+def display_users():
+    """
+    This function displays all the created user accounts
+    """
+    return User.display_users()
