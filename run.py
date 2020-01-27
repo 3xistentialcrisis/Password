@@ -103,7 +103,11 @@ def main():
 
     while True:
         print("""Use the following short codes: \n
-        acc - Create your Password Locker account \n
+        ac - Create your Password Locker account \n
+        lg - Login to your Password Locker account \n
+        du - Display User Accounts \n
+        nc - Create New Credential \n
+
         """)
 
         print(" ")
@@ -123,6 +127,18 @@ def main():
 
             print(save_users + "\n" + "congratulations! You have succesfully created your account")
 
+        #Login into Password Locker User A/C
+        elif short_code == "lg":
+            print("Log into your Password Locker Account")
+            username = input("Enter your username:")
+            password = input("Enter your password:")
+
+            if log_in(username,password):
+                print(log_in + "Welcome to your password locker account")
+                
+            else:
+                print("Please use shortcode lg to input your login details again")      
+        
         #Display User Account
         elif short_code == "du":
             print("\n")
@@ -133,6 +149,21 @@ def main():
         else:
             print("")
             print("You have not yet created your user account")
+
+        #Create a New Credential
+        elif short_code == "nc":
+            print("Add a new credential to your password locker account"
+            print("\n")
+
+            cred_account = input("Enter the credential name e.g. Facebook, Gmail")
+            cred_username = input("Enter your credential username:")
+            cred_password = input("Enter your credential password:")
+
+            save_new_credential = (Credential(cred_account,cred_username,cred_password))
+            print(save_new_credential)
+            print("\n")
+            print("Your credentials for {cred_username} have been saved")
+
 
 
 
