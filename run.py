@@ -9,8 +9,8 @@ def create_user_account(fname,username,password):
 
     Args:
         fname : This is the user's real first name
-        username : This is the user's name on the platform/account
-        password : This is the password chosen by the user
+        username : This is the user's name on the passworl locker platform/account
+        password : This is the password locker password chosen by the user
     """
 
     new_user = User(fname,username,password) 
@@ -45,7 +45,7 @@ def create_new_credential(fname,cred_account,cred_username,cred_password):
         fname : the user's real first name
         cred_account: name of new credential
         cred_username : username of the credential account
-        cred_password : password of the crential account
+        cred_password : password of the credential account
     """
     new_cred = Credential(fname,cred_account,cred_username,cred_password)
 
@@ -58,5 +58,27 @@ def save_new_credential(Credential):
     """
 
     Credential.save_new_credential()
+
+#Display Created Credentials
+def display_new_credentials(password):
+    """
+    This function displays all the created credentials
+    """
+
+    return Credential.display_new_credentials(password)
+
+#Generate New Password
+def create_new_password(cred_username):
+    """
+    This is a function that generates a new password for the user
+    
+    Args:
+        cred_username: this is the username of the credential account
+    """
+
+    gen_password = Credential.generate_password()
+
+    return gen_password
+
 
 
