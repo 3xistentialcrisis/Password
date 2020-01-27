@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.8
 from user import User
 from credentials import Credential
 
@@ -180,6 +181,12 @@ def main():
             print("Your new credential password has been saved")
             print(create_new_password(cred_password))
             # save_new_credential = (Credential(cred_account,cred_password,cred_username, (create_new_password(cred_username)))
+        
+        #Exit Application
+        elif short_code == "xx":
+            print("Goodbye!")
+
+            break
             
 if __name__ == '__main__':
     main()
