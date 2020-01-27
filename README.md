@@ -11,6 +11,7 @@ This application runs on the terminal. The following short codes are used to acc
  3. du - Display All User Accounts
  4. nc - Create New Credential
  5. gp - Generate New Password
+ 6. xx - Exit Application
 
 # Technologies Used
 This application was built through Python3.8 
