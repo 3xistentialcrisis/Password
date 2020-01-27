@@ -28,3 +28,10 @@ class User:
         This is a method that saves a user to the user_details array
         """
         User.user_details.append(self)
+    
+    @classmethod
+    def display_users(cls):
+        """
+        This is a method that returns/displays the contents of the user_details array
+        """
+        return cls.user_details
