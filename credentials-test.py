@@ -44,3 +44,20 @@ class TestCredential(unittest.TestCase):
 
         self.new_cred.save_new_credential()
         self.assertEqual(len(Credential.credential_details),1)
+
+    def test_display_new_credential(self):
+        """
+        This test case tests if all the created credentials are displayed to the user
+        """
+
+        # self.new_cred.save_new_credential()
+        # self.assertEqual(len(Credential.display_new_credentials))
+    
+    def test_generate_new_password(self):
+        """
+        This test case tests if the user can generate their own random password
+        """
+
+        gen_password = self.new_cred.generate_new_password()
+        self.assertEqual(len(gen_password),10)
+
