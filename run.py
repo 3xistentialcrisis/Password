@@ -98,8 +98,30 @@ def main():
     """
     This function runs the password locker application
     """
-    
+
     print("Welcome to the Password Locker Application!\n")
+
+    while True:
+        print("""Use the following short codes: \n
+        acc - Create your Password Locker account \n
+        """)
+
+        print(" ")
+
+        #User Inputs their short code
+        short_code = input("Enter : ").lower().strip()
+
+        #Create & Save Password Locker User A/C
+        if short_code == "ac":
+            print("\n")
+            print("To create a new password locker account:")
+            fname = input("Enter your first name:")
+            username = input("Enter your username:")
+            password = input("Enter your password:")
+
+            save_users = (User(fname, username,password))
+
+            print(save_users + "\n" + "congratulations! You have succesfully created your account")
 
 if __name__ == '__main__':
     main()
