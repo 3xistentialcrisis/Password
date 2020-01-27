@@ -7,7 +7,8 @@ This is an application that enables its users to store and manage their existing
 
 This application runs on the terminal. The following short codes are used to access the applications functions:
  1. ac - Create a New Password Locker Account
- 2. 
+ 2. lg - Login to your Password Locker Account
+ 3. du - Display All User Accounts
 
 # Technologies Used
 This application was built through Python3.8 
