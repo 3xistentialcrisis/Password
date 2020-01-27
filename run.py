@@ -12,6 +12,17 @@ def create_user_account(account_name,username,password,confirm_password):
     """
 
     new_user = User(account_name,username,password,confirm_password) 
-    
+
     return new_user
+
+def save_users(user):
+    """
+    This function saves the user account
+
+    Args:
+        user: This is the user whose account shall be saved
+    """
+
+    user.save_user()
+
     
