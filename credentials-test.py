@@ -35,4 +35,12 @@ class TestCredential(unittest.TestCase):
         self.assertEqual( self.new_cred.fname, "mary")
         self.assertEqual( self.new_cred.cred_account, "gmail")
         self.assertEqual( self.new_cred.cred_username, "batwoman")
-        self.assertEqual( self.new_cred.cred_password, "bat")
+        self.assertEqual( self.new_cred.cred_password, "bats")
+
+    def test_save_new_credential(self):
+        """
+        This test case tests if the newly created credential is saved into the credential_details array
+        """
+
+        self.new_cred.save_new_credential()
+        self.assertEqual(len(Credential.credential_details),1)
