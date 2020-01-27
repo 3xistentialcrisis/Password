@@ -1,6 +1,7 @@
 #!/usr/bin/env python3.8
 from user import User
 from credentials import Credential
+import sys; print(sys.version)
 
 
 #Create User A/C
@@ -109,6 +110,7 @@ def main():
         du - Display User Accounts \n
         nc - Create New Credential \n
         gp - Generate New Password \n
+        xx - Exit Application \n
 
         """)
 
