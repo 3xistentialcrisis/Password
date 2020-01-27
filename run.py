@@ -51,4 +51,12 @@ def create_new_credential(fname,cred_account,cred_username,cred_password):
 
     return new_cred
 
+#Save New Credentials
+def save_new_credential(Credential):
+    """
+    This function saves the newly created credential
+    """
+
+    Credential.save_new_credential()
+
 
