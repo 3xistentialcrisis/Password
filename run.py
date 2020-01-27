@@ -107,6 +107,7 @@ def main():
         lg - Login to your Password Locker account \n
         du - Display User Accounts \n
         nc - Create New Credential \n
+        gp - Generate New Password \n
 
         """)
 
@@ -146,26 +147,39 @@ def main():
             display_users = User.display_users()
             print(display_users)
 
-        else:
-            print("")
-            print("You have not yet created your user account")
+        # else:
+        #     print("")
+        #     print("You have not yet created your user account")
 
         #Create a New Credential
         elif short_code == "nc":
-            print("Add a new credential to your password locker account"
+            print("Add a new credential to your password locker account")
             print("\n")
 
             cred_account = input("Enter the credential name e.g. Facebook, Gmail")
             cred_username = input("Enter your credential username:")
             cred_password = input("Enter your credential password:")
 
-            save_new_credential = (Credential(cred_account,cred_username,cred_password))
+            save_new_credential = (cred_account,cred_username,cred_password)
             print(save_new_credential)
             print("\n")
             print("Your credentials for {cred_username} have been saved")
 
+        #Display New Credential w/ password
+        elif short_code == "dc":
+            for Credential in display_new_credentials(cred_account):
+                print(f"Username is {Credential.cred_username}")
+                print("\n")
+                print(f"Password is {Credential.cred_password}")
+        
+        elif short_code == "gp":
+            print("Please enter the name of the credential that you would like to generate a password")
+            cred_account = input()
 
-
-
+            #Update Credential with new password
+            print("Your new credential password has been saved")
+            print(create_new_password(cred_password))
+            # save_new_credential = (Credential(cred_account,cred_password,cred_username, (create_new_password(cred_username)))
+            
 if __name__ == '__main__':
     main()

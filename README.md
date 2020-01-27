@@ -9,6 +9,8 @@ This application runs on the terminal. The following short codes are used to acc
  1. ac - Create a New Password Locker Account
  2. lg - Login to your Password Locker Account
  3. du - Display All User Accounts
+ 4. nc - Create New Credential
+ 5. gp - Generate New Password
 
 # Technologies Used
 This application was built through Python3.8 
@@ -47,8 +49,6 @@ This application enables its users to:
 2. Store their existing account login credentials;
 3. Generate a random alpahanumeric password for their new credentials;
 
-# Behavior-Driven Development (BDD)
-1. 
 
 # Test Driven Development (TDD)
 To test this application, run this commands in the terminal;
