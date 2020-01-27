@@ -6,19 +6,19 @@ class User:
     #User Details Array 
     user_details = []
 
-    def __init__(self,account_name,username,password,confirm_password):
+    def __init__(self,fname,username,password,confirm_password):
         """
         This __init__ method defines the properties of the User object
 
         Args:
-            account_name : name of account in use
+            fname : the user's real first name
             username : associated with the user's account
             password : user's password
             confirm_password : confirm user's password
 
         """
 
-        self.account_name = account_name
+        self.fname = fname
         self.username = username
         self.password = password
         self.confirm_password = confirm_password

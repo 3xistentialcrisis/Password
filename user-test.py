@@ -15,7 +15,7 @@ class TestUser(unittest.TestCase):
         """
 
         #User Object
-        self.new_user = User("instagram","mary","cat","cat") 
+        self.new_user = User("mary","catwoman","cat","cat") 
 
         #User Details Array
         User.user_details = []
@@ -32,8 +32,8 @@ class TestUser(unittest.TestCase):
         This test case tests if the User object is initialised properly
         """
 
-        self.assertEqual(self.new_user.account_name,"instagram")
-        self.assertEqual( self.new_user.username, "mary" )
+        self.assertEqual( self.new_user.fname,"mary")
+        self.assertEqual( self.new_user.username, "catwoman" )
         self.assertEqual( self.new_user.password, "cat" )
         self.assertEqual( self.new_user.confirm_password, "cat" )
     
